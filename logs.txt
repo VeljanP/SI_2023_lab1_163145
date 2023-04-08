@@ -1,0 +1,46 @@
+velja@Pejovski MINGW64 ~/VeljanGit/SI_2023_lab1_163145 (master)
+$ git log
+commit 1b69229d14821e569e5c05ffc59f4181486dbb55 (HEAD -> master, origin/master, bug3)
+Merge: f9522f8 4eddc2a
+Author: VeljanP <veljan.pejovski@gmail.com>
+Date:   Sat Apr 8 14:56:47 2023 +0200
+
+    Merge branch 'bug3'
+
+commit f9522f808a596a5f7f55ccd3efe9d8c54973d360
+Merge: 4fbab99 61722d8
+Author: VeljanP <veljan.pejovski@gmail.com>
+Date:   Sat Apr 8 14:53:33 2023 +0200
+
+    Merge branch 'bug2'
+
+commit 4eddc2af53db72053237a4ecfdadf2780f79e6fd (origin/bug3)
+Author: VeljanP <veljan.pejovski@gmail.com>
+Date:   Sat Apr 8 14:44:51 2023 +0200
+
+    Fix method sumEvenNumbers
+
+commit 61722d804a869c1e2432b53d235912de6dc723e6 (origin/bug2, bug2)
+Author: VeljanP <veljan.pejovski@gmail.com>
+Date:   Sat Apr 8 14:42:49 2023 +0200
+
+    Fix wrong condition in filterOddNumbers
+
+commit 4fbab995147bc82fec6fb3e7d9afe2853af8f87a (origin/bug1, bug1)
+Author: VeljanP <veljan.pejovski@gmail.com>
+Date:   Sat Apr 8 14:40:19 2023 +0200
+
+    Fix wrong loop for reading
+
+commit 985c6f8bea0a517f6ab4af62f6285f0588bed761
+Author: VeljanP <veljan.pejovski@gmail.com>
+Date:   Sat Apr 8 14:38:06 2023 +0200
+
+    Greska
+
+commit 0a6c5b11a7f040fb03d2e97f0a4481f03ed1d9cc
+Author: VeljanP <veljan.pejovski@gmail.com>
+Date:   Sat Apr 8 13:16:53 2023 +0200
+
+    Pocetok na Vezba
+

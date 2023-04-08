@@ -1,0 +1,364 @@
+echo "# SI_2023_lab1_163145" >> README.md - Kreiranje prv fajl vo lokalniot direktorium
+
+velja@Pejovski MINGW64 ~/VeljanGit/SI_2023_lab1_163145
+$ git init - Inicijaliziranje na git direktoriumot
+Initialized empty Git repository in C:/Users/velja/VeljanGit/SI_2023_lab1_163145/.git/
+
+velja@Pejovski MINGW64 ~/VeljanGit/SI_2023_lab1_163145 (master)
+$ git add README.md - Dodavanje na promeni od rabotniot direktorium
+warning: LF will be replaced by CRLF in README.md.
+The file will have its original line endings in your working directory.
+
+velja@Pejovski MINGW64 ~/VeljanGit/SI_2023_lab1_163145 (master)
+$ git commit -m "Pocetok na Vezba" - Dodavanje na poslednite promeni vo Git istorijata na proektot
+[master (root-commit) 0a6c5b1] Pocetok na Vezba
+ 1 file changed, 1 insertion(+)
+ create mode 100644 README.md
+
+velja@Pejovski MINGW64 ~/VeljanGit/SI_2023_lab1_163145 (master)
+$ git branch -M master - Promena na branch imeto
+
+velja@Pejovski MINGW64 ~/VeljanGit/SI_2023_lab1_163145 (master)
+$ git remote add origin https://github.com/VeljanP/SI_2023_lab1_163145.git - Pravenje nov remote so ime origin koj go zamenuva urlto
+
+$ git push -u origin master - Pushnuvanje na site commit-i na master branchot
+Logon failed, use ctrl+c to cancel basic credential prompt.
+Username for 'https://github.com': VeljanP
+Counting objects: 3, done.
+Writing objects: 100% (3/3), 243 bytes | 243.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+To https://github.com/VeljanP/SI_2023_lab1_163145.git
+ * [new branch]      master -> master
+Branch 'master' set up to track remote branch 'master' from 'origin'.
+
+velja@Pejovski MINGW64 ~/VeljanGit/SI_2023_lab1_163145 (master)
+$ echo "" > SILab1.java - Kreiranje na prazen fajl so ime SILab1.java
+
+velja@Pejovski MINGW64 ~/VeljanGit/SI_2023_lab1_163145 (master)
+$ ls - Listanje na direktoriumot
+README.md  SILab1.java
+
+velja@Pejovski MINGW64 ~/VeljanGit/SI_2023_lab1_163145 (master)
+$ nano SILab1.java - Otvaranje na fajlot so nano editor za dodavanje na kodot
+
+velja@Pejovski MINGW64 ~/VeljanGit/SI_2023_lab1_163145 (master)
+$ cat SILab1.java - Proverka na contentot na fajlot
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+
+public class SILab1 {
+    public static List<Integer> filterOddNumbers(List<Integer> list) {
+        List<Integer> result = new ArrayList<>();
+        for (Integer el : list) {
+            if (el % 2 == 0) {
+                result.add(el);
+            }
+        }
+        return result;
+    }
+
+    private static int sumEvenNumbers(List<Integer> list) {
+        int sum = 1;
+        for (Integer el : list) {
+            if (el % 2 == 0) {
+                sum *= el;
+            }
+        }
+        return sum;
+    }
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        int n = sc.nextInt();
+
+        List<Integer> list = new ArrayList<>();
+
+        for (int i = 0; i <= n; i++) {
+            list.add(sc.nextInt());
+        }
+
+        System.out.println(filterOddNumbers(list));
+
+        System.out.println(sumEvenNumbers(list));
+    }
+}
+
+velja@Pejovski MINGW64 ~/VeljanGit/SI_2023_lab1_163145 (master)
+$ git add SILab1.java - Dodavanje na promeni od rabotniot direktorium
+warning: LF will be replaced by CRLF in SILab1.java.
+The file will have its original line endings in your working directory.
+
+velja@Pejovski MINGW64 ~/VeljanGit/SI_2023_lab1_163145 (master)
+$ git commit -m "Add Java Class" - Dodavanje na poslednite promeni vo Git istorijata na proektot so komentar
+[master 1741b17] Add Java Class
+ 1 file changed, 41 insertions(+)
+ create mode 100644 SILab1.java
+ 
+ velja@Pejovski MINGW64 ~/VeljanGit/SI_2023_lab1_163145 (master)
+$ git checkout -b bug1 - Kreiranje nova granka so ime bug1
+Switched to a new branch 'bug1'
+M       SILab1.java
+
+velja@Pejovski MINGW64 ~/VeljanGit/SI_2023_lab1_163145 (bug1)
+$ git checkout -b bug2 -||-
+Switched to a new branch 'bug2'
+M       SILab1.java
+
+velja@Pejovski MINGW64 ~/VeljanGit/SI_2023_lab1_163145 (bug2)
+$ git checkout -b bug3 -||-
+Switched to a new branch 'bug3'
+M       SILab1.java
+
+velja@Pejovski MINGW64 ~/VeljanGit/SI_2023_lab1_163145 (bug3)
+$ git checkout bug1 - Vleguvanje na granka bug1
+Switched to branch 'bug1'
+M       SILab1.java
+
+velja@Pejovski MINGW64 ~/VeljanGit/SI_2023_lab1_163145 (bug1)
+$ git status - Proverka na status na git(promeneti/dodadeni fajlovi)
+\On branch bug1
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   SILab1.java
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+velja@Pejovski MINGW64 ~/VeljanGit/SI_2023_lab1_163145 (bug1)
+$ git add SILab1.java
+warning: LF will be replaced by CRLF in SILab1.java.
+The file will have its original line endings in your working directory.
+
+velja@Pejovski MINGW64 ~/VeljanGit/SI_2023_lab1_163145 (bug1)
+$ git commit -m "Fix wrong loop for reading" - pravenje na promena vo bug1
+[bug1 4fbab99] Fix wrong loop for reading
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+velja@Pejovski MINGW64 ~/VeljanGit/SI_2023_lab1_163145 (bug1)
+$ git status
+On branch bug1
+nothing to commit, working tree clean
+
+velja@Pejovski MINGW64 ~/VeljanGit/SI_2023_lab1_163145 (bug2)
+$ git status
+On branch bug2
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   SILab1.java
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+velja@Pejovski MINGW64 ~/VeljanGit/SI_2023_lab1_163145 (bug2)
+$ git add SILab1.java
+
+velja@Pejovski MINGW64 ~/VeljanGit/SI_2023_lab1_163145 (bug2)
+$ git commit -m "Fix wrong condition in filterOddNumbers"
+[bug2 61722d8] Fix wrong condition in filterOddNumbers
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+ 
+ velja@Pejovski MINGW64 ~/VeljanGit/SI_2023_lab1_163145 (bug3)
+$ git status
+On branch bug3
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   SILab1.java
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+velja@Pejovski MINGW64 ~/VeljanGit/SI_2023_lab1_163145 (bug3)
+$ git add SILab1.java
+
+velja@Pejovski MINGW64 ~/VeljanGit/SI_2023_lab1_163145 (bug3)
+$ git commit -m "Fix method sumEvenNumbers"
+[bug3 4eddc2a] Fix method sumEvenNumbers
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+velja@Pejovski MINGW64 ~/VeljanGit/SI_2023_lab1_163145 (bug3)
+$ git status
+On branch bug3
+nothing to commit, working tree clean
+
+velja@Pejovski MINGW64 ~/VeljanGit/SI_2023_lab1_163145 (bug3)
+$ git checkout bug1
+Switched to branch 'bug1'
+
+velja@Pejovski MINGW64 ~/VeljanGit/SI_2023_lab1_163145 (bug1)
+$ git status
+On branch bug1
+nothing to commit, working tree clean
+
+velja@Pejovski MINGW64 ~/VeljanGit/SI_2023_lab1_163145 (bug1)
+$ git push origin bug1 - Sync so remote direktorium
+Counting objects: 3, done.
+Delta compression using up to 8 threads.
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 329 bytes | 329.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+remote:
+remote: Create a pull request for 'bug1' on GitHub by visiting:
+remote:      https://github.com/VeljanP/SI_2023_lab1_163145/pull/new/bug1
+remote:
+To https://github.com/VeljanP/SI_2023_lab1_163145.git
+ * [new branch]      bug1 -> bug1
+
+velja@Pejovski MINGW64 ~/VeljanGit/SI_2023_lab1_163145 (bug1)
+$ git checkout bug2 - Prefrlanje na branch bug2
+Switched to branch 'bug2'
+
+velja@Pejovski MINGW64 ~/VeljanGit/SI_2023_lab1_163145 (bug2)
+$ git status
+On branch bug2
+nothing to commit, working tree clean
+
+velja@Pejovski MINGW64 ~/VeljanGit/SI_2023_lab1_163145 (bug2)
+$ git push origin bug2 - Sync so remote direktorium
+Counting objects: 3, done.
+Delta compression using up to 8 threads.
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 345 bytes | 345.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+remote:
+remote: Create a pull request for 'bug2' on GitHub by visiting:
+remote:      https://github.com/VeljanP/SI_2023_lab1_163145/pull/new/bug2
+remote:
+To https://github.com/VeljanP/SI_2023_lab1_163145.git
+ * [new branch]      bug2 -> bug2
+
+velja@Pejovski MINGW64 ~/VeljanGit/SI_2023_lab1_163145 (bug2)
+$ git checkout bug3 - prefrlanje na branch bug3
+Switched to branch 'bug3'
+
+velja@Pejovski MINGW64 ~/VeljanGit/SI_2023_lab1_163145 (bug3)
+$ git status
+On branch bug3
+nothing to commit, working tree clean
+
+velja@Pejovski MINGW64 ~/VeljanGit/SI_2023_lab1_163145 (bug3)
+$ git push origin bug3 - Sync so remote direktorium
+Counting objects: 3, done.
+Delta compression using up to 8 threads.
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 328 bytes | 328.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+remote:
+remote: Create a pull request for 'bug3' on GitHub by visiting:
+remote:      https://github.com/VeljanP/SI_2023_lab1_163145/pull/new/bug3
+remote:
+To https://github.com/VeljanP/SI_2023_lab1_163145.git
+ * [new branch]      bug3 -> bug3
+ 
+ $ git checkout master - Promena na branch vo master
+Switched to branch 'master'
+Your branch is up to date with 'origin/master'.
+
+velja@Pejovski MINGW64 ~/VeljanGit/SI_2023_lab1_163145 (master)
+$ git status - pregled na status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+nothing to commit, working tree clean
+
+velja@Pejovski MINGW64 ~/VeljanGit/SI_2023_lab1_163145 (master)
+$ git merge bug1 - spojuvanje na branch bug1 so master
+Updating 985c6f8..4fbab99
+Fast-forward
+ SILab1.java | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+velja@Pejovski MINGW64 ~/VeljanGit/SI_2023_lab1_163145 (master)
+$ git status
+On branch master
+Your branch is ahead of 'origin/master' by 1 commit.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+
+velja@Pejovski MINGW64 ~/VeljanGit/SI_2023_lab1_163145 (master)
+$ git push origin master - sync
+Total 0 (delta 0), reused 0 (delta 0)
+To https://github.com/VeljanP/SI_2023_lab1_163145.git
+   985c6f8..4fbab99  master -> master
+
+velja@Pejovski MINGW64 ~/VeljanGit/SI_2023_lab1_163145 (master)
+$ git merge bug2 - spojuvanje na branch bug2 so master
+hint: Waiting for your editor to close the file... Auto-merging SILab1.java
+Merge made by the 'recursive' strategy.
+ SILab1.java | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+velja@Pejovski MINGW64 ~/VeljanGit/SI_2023_lab1_163145 (master)
+$ git status
+On branch master
+Your branch is ahead of 'origin/master' by 2 commits.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+
+velja@Pejovski MINGW64 ~/VeljanGit/SI_2023_lab1_163145 (master)
+$ git push origin master - sync
+Counting objects: 3, done.
+Delta compression using up to 8 threads.
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 357 bytes | 357.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/VeljanP/SI_2023_lab1_163145.git
+   4fbab99..f9522f8  master -> master
+
+velja@Pejovski MINGW64 ~/VeljanGit/SI_2023_lab1_163145 (master)
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+nothing to commit, working tree clean
+
+velja@Pejovski MINGW64 ~/VeljanGit/SI_2023_lab1_163145 (master)
+$ git merge bug3 - spojuvanje na branch bug3 so master
+hint: Waiting for your editor to close the file... Auto-merging SILab1.java
+Merge made by the 'recursive' strategy.
+ SILab1.java | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+velja@Pejovski MINGW64 ~/VeljanGit/SI_2023_lab1_163145 (master)
+$ git status
+On branch master
+Your branch is ahead of 'origin/master' by 2 commits.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+
+velja@Pejovski MINGW64 ~/VeljanGit/SI_2023_lab1_163145 (master)
+$ git checkout bug3 - prefrlanje vo branch bu3
+Switched to branch 'bug3'
+
+velja@Pejovski MINGW64 ~/VeljanGit/SI_2023_lab1_163145 (bug3)
+$ git rebase master - pravenje rebase vo master
+First, rewinding head to replay your work on top of it...
+Fast-forwarded bug3 to master.
+
+velja@Pejovski MINGW64 ~/VeljanGit/SI_2023_lab1_163145 (bug3)
+$ git checkout master - prefrlanje vo branch master
+Switched to branch 'master'
+Your branch is ahead of 'origin/master' by 2 commits.
+  (use "git push" to publish your local commits)
+
+velja@Pejovski MINGW64 ~/VeljanGit/SI_2023_lab1_163145 (master)
+$ git push origin master - sync
+Counting objects: 3, done.
+Delta compression using up to 8 threads.
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 354 bytes | 354.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/VeljanP/SI_2023_lab1_163145.git
+   f9522f8..1b69229  master -> master
